@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <link rel="icon" href="./icons/6.svg" />
+    <script src="./app.js" defer></script>
+    <title>Doom's Bar</title>
+  </head>
+  <body>
+    <header>
+      <a href="#landing-page"><h2 class="logo">Doom's Bar</h2></a>
+      <nav>
+        <a href="./cocktail-page.html"><h3>Random drinks</h3></a>
+        <a href="./ingredients-page.html"><h3>Pick a drink</h3></a>
+        <a href="./under-construction.html"><h3>dRINKS</h3></a>
+      </nav>
+      <form class="search-form" id="form">
+        <input type="text" name="search" class="search-input" />
+        <button type="submit" class="submit-btn">Search</button>
+      </form>
+      <button id="cursor-trigger-btn">Select a cursor buddy!</button>
+      <section class="cursor-container"></section>
+    </header>
+    <main>
+      <modal class="pop-up">
+        <div class="overlay"></div>
+        <div class="age-gate-container">
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            data-name="Layer 1"
+            class="age-gate-svg"
+          >
+            <path
+              d="M18,5h1V6a1,1,0,0,0,2,0V5h1a1,1,0,0,0,0-2H21V2a1,1,0,0,0-2,0V3H18a1,1,0,0,0,0,2ZM7,7V17a1,1,0,0,0,2,0V7A1,1,0,0,0,7,7ZM21.6,9a1,1,0,0,0-.78,1.18,9,9,0,1,1-7-7,1,1,0,1,0,.4-2A10.8,10.8,0,0,0,12,1,11,11,0,1,0,23,12a10.8,10.8,0,0,0-.22-2.2A1,1,0,0,0,21.6,9ZM11,9v1a3,3,0,0,0,.78,2A3,3,0,0,0,11,14v1a3,3,0,0,0,3,3h1a3,3,0,0,0,3-3V14a3,3,0,0,0-.78-2A3,3,0,0,0,18,10V9a3,3,0,0,0-3-3H14A3,3,0,0,0,11,9Zm5,6a1,1,0,0,1-1,1H14a1,1,0,0,1-1-1V14a1,1,0,0,1,1-1h1a1,1,0,0,1,1,1Zm0-6v1a1,1,0,0,1-1,1H14a1,1,0,0,1-1-1V9a1,1,0,0,1,1-1h1A1,1,0,0,1,16,9Z"
+            />
+          </svg>
+          <div class="age-gate-text-container">
+            <p>
+              Hello there dear traveller of the Internet. <br />
+              You must be thirsty, let me crack open a cold one just for you!
+              <br />
+              But first lets make sure you are of legal drinking age!
+            </p>
+          </div>
+          <div class="age-gate-question-container">
+            <h2>Are you over 18 years old?</h2>
+            <div class="question-button-container">
+              <button id="age-gate-btn-yes">Yes</button>
+              <button id="age-gate-btn-no">No</button>
+            </div>
+          </div>
+        </div>
+      </modal>
+      <section id="landing-page" class="landing-page content"></section>
+      <section class="greeting">
+        <img src="./images/drinks-sunset.jpg" alt="beers at sunset" />
+        <div class="greeting-text-container">
+          <h1 class="greeting-title">Welcome to my humble establishment.</h1>
+          <h2 class="greeting-subtitle">-Doom's bar is at your service-</h2>
+          <p class="greeting-msg">
+            Here you will find hundreds of cocktail recipies to choose from!
+            Each one is equiped with a list of all the required ingredients and
+            instructions on how it is prepared... so.. What will it be?
+          </p>
+        </div>
+      </section>
+
+      <div class="cursor"></div>
+    </main>
+    <footer>
+      <a href="#"> <h2 class="logo">Doom's Bar</h2></a>
+      <nav>
+        <a target="___blank" href="https://www.doomdude.com"
+          ><h3>portfolio.</h3></a
+        >
+        <a target="__blank" href="https://github.com/doomdude7"
+          ><h3>github.</h3></a
+        >
+      </nav>
+      <div class="logo-container">
+        <h2>By:</h2>
+        <img
+          class="doom-img"
+          src="./images/DoomDude_Text.png"
+          alt="doomdude logo"
+        />
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+      integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  </body>
+</html>
