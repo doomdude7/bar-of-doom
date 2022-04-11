@@ -713,7 +713,7 @@ nav a:hover {
   position: fixed;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 11;
   cursor: default;
 }
 .overlay {
@@ -734,7 +734,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 6;
+  z-index: 12;
   background-color: #110814c5;
   border-radius: 5rem;
 }
